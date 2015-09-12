@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listando Exercicios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>INICIANTE</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <% @basico.each do |exercicio| %>
+      <td><%= link_to exercicio do
+        image_tag exercicio.figura, size:"200x200"
+        end %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+<table>
+<thead>
+    <tr>
+      <th>INTERMEDIÁRIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @intermediario.each do |exercicio| %>
+      <td><%= link_to exercicio do
+        image_tag exercicio.figura, size:"200x200"
+        end %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>AVANÇADO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @avancado.each do |exercicio| %>
+      <td><%= link_to exercicio do
+        image_tag exercicio.figura, size:"200x200"
+        end %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exercicio', new_exercicio_path %>

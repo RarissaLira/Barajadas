@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @exercicio.nome %>
+</h1>
+
+<%= image_tag @exercicio.tirinha ,size:"400x600"%>
+
+<%= link_to 'Edit', edit_exercicio_path(@exercicio) %> |
+<%= link_to 'Back', exercicios_path %>
